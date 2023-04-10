@@ -15,8 +15,6 @@ namespace AK.OfferCase
         [SerializeField]
         private Transform _offerItemsParent;
 
-        private bool _isShown=false;
-
         public void CreateItemsGrid(List<OfferCaseItemSO> items)
         {
             ClearUpGrid();
@@ -34,16 +32,6 @@ namespace AK.OfferCase
             {
                 Destroy(item.gameObject);
             }
-        }
-
-        private void Show()
-        {
-            
-        }
-
-        private void Hide()
-        {
-
         }
     }
 }

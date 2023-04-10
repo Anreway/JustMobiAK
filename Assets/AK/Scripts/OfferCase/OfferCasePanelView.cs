@@ -44,14 +44,14 @@ namespace AK.OfferCase
                 _discountVisual.SetActive(true);
 
                 _discountAmountTMP.text = (_offerSO.Discount * 100).ToString() + "%";
-                _priceWithoutDiscountTMP.text = _offerSO.Price.ToString();
-                _priceTMP.text = _offerSO.PriceAfterDiscount.ToString();
+                _priceWithoutDiscountTMP.text = _offerSO.Price.ToString() + _offerSO.PricePostfix;
+                _priceTMP.text = _offerSO.PriceAfterDiscount.ToString() + _offerSO.PricePostfix;
             }
             else
             {
                 _discountVisual.SetActive(false);
 
-                _priceTMP.text = _offerSO.PriceAfterDiscount.ToString();
+                _priceTMP.text = _offerSO.PriceAfterDiscount.ToString() + _offerSO.PricePostfix; ;
             }
         }
     }
